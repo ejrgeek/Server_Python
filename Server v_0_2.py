@@ -49,8 +49,8 @@ try:
 			system('passwd')
 			
 		
-		elif msg == '':
-			system('')
+		elif msg == 'mv':
+			system('mv')
 			
 			
 		elif msg == 'exit':
