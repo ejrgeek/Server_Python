@@ -15,48 +15,10 @@ try:
 		msg = obj.recv(1024)
 		msg = msg[:-1]
 		print(cliente[0],">",msg)
-		if msg == "ls":
-			system('ls')
+		system(msg)
 		
-		elif msg == 'ifconfig':
-			system('ifconfig')
-		
-		elif msg == 'whoami':
-			system('whoami')
-		
-		elif msg == 'cd':
-			system('cd')
-			
-		elif msg == 'cp':
-			system('cp')
-			
-		elif msg == 'rm':
-			system('rm')
-		
-		elif msg == 'cat':
-			system('cat')
-			
-		elif msg == 'ssh':
-			system('ssh')
-		
-		elif msg == 'scp':
-			system('scp')
-		
-		elif msg == 'chmod':
-			system('chmod')
-		
-		elif msg == 'passwd':
-			system('passwd')
-			
-		
-		elif msg == 'mv':
-			system('mv')
-			
-			
-		elif msg == 'exit':
+		if msg == 'exit':
 			server.close()
-		else:
-			print("Comando não Encontrado")
 except Exception as erro:
 	print(erro)
 	server.close()
